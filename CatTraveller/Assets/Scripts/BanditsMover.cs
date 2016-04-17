@@ -8,10 +8,7 @@ public class BanditsMover : MonoBehaviour {
     public Vector2 moveResult = Vector2.zero;
     Rigidbody2D rigidbody;
     public float moveTime = 2f;
-    public float moveTimer;
-
-    public Transform attackPoint;
-    
+    public float moveTimer;    
 
     void Start()
     {
@@ -23,7 +20,7 @@ public class BanditsMover : MonoBehaviour {
 	void Update ()
     {
         moveResult.y = rigidbody.velocity.y;
-        if (rigidbody.velocity.y == 0)
+        if (Math.Abs(rigidbody.velocity.y) <= 0.5)
         {
             moveTimer -= Time.deltaTime;
             if (moveTimer <= 0)
@@ -40,10 +37,5 @@ public class BanditsMover : MonoBehaviour {
         else
             moveResult.x = 0;
         rigidbody.velocity = moveResult;
-    }
-
-    void FixedUpdate()
-    {
-        
     }
 }

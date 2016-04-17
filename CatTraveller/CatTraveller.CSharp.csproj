@@ -65,27 +65,41 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AppleTrap.cs" />
     <Compile Include="Assets\Scripts\Attack.cs" />
+    <Compile Include="Assets\Scripts\BananaBoss.cs" />
+    <Compile Include="Assets\Scripts\BananaCreator.cs" />
     <Compile Include="Assets\Scripts\BanditsMover.cs" />
+    <Compile Include="Assets\Scripts\BounceDown.cs" />
     <Compile Include="Assets\Scripts\CameraMover.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\EndLevel.cs" />
     <Compile Include="Assets\Scripts\FakeObject.cs" />
     <Compile Include="Assets\Scripts\FlyingBirdActivate.cs" />
+    <Compile Include="Assets\Scripts\FruitsMover.cs" />
+    <Compile Include="Assets\Scripts\FullInv.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\GetUpFlag.cs" />
+    <Compile Include="Assets\Scripts\GorillaController.cs" />
     <Compile Include="Assets\Scripts\HeroAttack.cs" />
     <Compile Include="Assets\Scripts\InvisibleObj.cs" />
     <Compile Include="Assets\Scripts\Jumper.cs" />
+    <Compile Include="Assets\Scripts\JumpingObject.cs" />
     <Compile Include="Assets\Scripts\KickBrick.cs" />
     <Compile Include="Assets\Scripts\KillFromJump.cs" />
     <Compile Include="Assets\Scripts\KillObject.cs" />
+    <Compile Include="Assets\Scripts\MiniSuperTrap.cs" />
     <Compile Include="Assets\Scripts\MoveUpDown.cs" />
     <Compile Include="Assets\Scripts\Mover.cs" />
+    <Compile Include="Assets\Scripts\MusicPlayer.cs" />
+    <Compile Include="Assets\Scripts\ObjectFromGround.cs" />
+    <Compile Include="Assets\Scripts\PullRope.cs" />
+    <Compile Include="Assets\Scripts\PullRope2.cs" />
     <Compile Include="Assets\Scripts\RestartWholeGame.cs" />
     <Compile Include="Assets\Scripts\SceneMan.cs" />
+    <Compile Include="Assets\Scripts\SuperTrap.cs" />
     <Compile Include="Assets\Scripts\TouchToKill.cs" />
     <Compile Include="Assets\Scripts\UnitsHP.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
+    <Compile Include="Assets\Scripts\WaterMelonKiller.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

@@ -11,12 +11,12 @@ public class KillFromJump : MonoBehaviour
         {
             if (Utils.SecondUnderFirst(collision.gameObject, gameObject))
             {
-                collision.gameObject.GetComponent<Jumper>().Jump(true);
+                collision.gameObject.GetComponent<Jumper>().Jump(true, false);
                 Destroy(gameObject, 0.1f);
             }
             else
             {
-                SceneMan.Die();
+                collision.gameObject.GetComponent<SceneMan>().Die();
             }
         }
         else if (Utils.IsEntity(collision.gameObject))

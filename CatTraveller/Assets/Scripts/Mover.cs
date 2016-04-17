@@ -22,7 +22,7 @@ public class Mover : MonoBehaviour
     void Update()
     {
         if (transform.position.y < groundPosition)
-            SceneMan.Die();
+            GetComponent<SceneMan>().Die();
 
         moveDirection = rigidbody.position;
         if (Input.GetKey("a"))
@@ -39,12 +39,11 @@ public class Mover : MonoBehaviour
         }
         else
             anim.SetBool("isMoving", false);
-
-
+       
         if (Input.GetKeyDown("space"))
         {
-            if (rigidbody.velocity.y == 0)
-                GetComponent<Jumper>().Jump(true);
+            if (Math.Abs(rigidbody.velocity.y) <= 0.5)
+                GetComponent<Jumper>().Jump(true, true);
         }
         if (rigidbody.velocity.y != 0)
             moveDirection.y -= gravity * Time.deltaTime;

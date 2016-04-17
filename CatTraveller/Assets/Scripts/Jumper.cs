@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Jumper : MonoBehaviour {
 
+    public AudioClip JumpSound;
     public float jumpSpeed = 32f;
     public float jumpTime = 0.7f;
     float currJump = 0;
@@ -15,10 +16,15 @@ public class Jumper : MonoBehaviour {
     }
 
 
-    public void Jump(bool isTop)
+    public void Jump(bool isTop, bool playSound)
     {
+        if (playSound)
+            AudioSource.PlayClipAtPoint(JumpSound, transform.position);
         if (isTop)
+        {
             currJump = jumpSpeed;
+        }
+            
         else
             currJump = -jumpSpeed;
     }

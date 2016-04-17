@@ -8,7 +8,7 @@ public class TouchToKill : MonoBehaviour {
         if (Utils.IsHero(collision.gameObject))
         { 
             if (Utils.SecondUnderFirst(gameObject, collision.gameObject))
-                SceneMan.Die();  
+                collision.gameObject.GetComponent<SceneMan>().Die();  
         }
         else
         {

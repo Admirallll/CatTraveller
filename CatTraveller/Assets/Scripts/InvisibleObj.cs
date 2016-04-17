@@ -5,12 +5,18 @@ public class InvisibleObj : MonoBehaviour {
 
     void Start()
     {
+        GetComponent<BoxCollider2D>().isTrigger = true;
         GetComponent<SpriteRenderer>().enabled = false;
     }
 
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<SpriteRenderer>().enabled = true;
+        if (Utils.FirstUnderSecond(collision.gameObject, gameObject))
+        {
+            GetComponent<BoxCollider2D>().isTrigger = false;
+            GetComponent<SpriteRenderer>().enabled = true;
+        }
+
     }
 }

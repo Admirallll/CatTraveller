@@ -13,7 +13,7 @@ public class KickBrick : MonoBehaviour {
         if (collision.gameObject.layer == 9)
             if (Utils.FirstUnderSecond(collision.gameObject, gameObject))
             {
-                collision.gameObject.GetComponent<Jumper>().Jump(false);
+                collision.gameObject.GetComponent<Jumper>().Jump(false, false);
                 Destroy(gameObject);
                 if (Drop != null)
                 {
